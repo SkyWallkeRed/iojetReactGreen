@@ -1,7 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import CubeComponent from './animationContainers/animations/cube/Cube';
+import CubeContainer from './containers/CubeContainer';
 import HomeContainer from './containers/homeContainer';
+import MainContainer from './containers/MainContainer';
 // import App from './App';
 const style = {
     backgroundColor:'white',
@@ -25,7 +27,8 @@ function RouterNav() {
 
                 {/*<hr />*/}
 
-                <Route exact path="/" component={Home} />
+                <Route exact path="/" component={Cube} />
+                <Route exact path="/home" component={Home} />
                 <Route path="/about" component={About} />
                 <Route path="/topics" component={Topics} />
             </div>
@@ -33,9 +36,17 @@ function RouterNav() {
     );
 }
 
+function Cube() {
+    return (
+        <CubeContainer/>
+    )
+}
+
 function Home() {
     // return <div />
-    return <CubeComponent/>
+    return (
+        <MainContainer/>
+    )
 }
 
 function About() {

@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import './reset.css';
 import './index.css';
 import HomeContainer from './containers/homeContainer';
+import RouterNav from './RouterNav';
 // import RouterNav from './RouterNav';
 import * as serviceWorker from './serviceWorker';
 // import { TweenMax, Power2 } from "gsap/umd/TweenMax";
@@ -14,7 +15,8 @@ import * as serviceWorker from './serviceWorker';
 // import SplitText from "./gsap-bonus/SplitText";
 const plugins = [ CSSPlugin, AttrPlugin ];
 
-ReactDOM.render(<HomeContainer />, document.getElementById('root'));
+ReactDOM.render(<RouterNav />, document.getElementById('root'));
+// ReactDOM.render(<HomeContainer />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

@@ -65,7 +65,6 @@ class CubeComponent extends Component {
             <div className="wrap">
                 <div className="cube cubeAnimation" onClick={this.handleClick}>
                     <div className="front">
-                        {/*<RouterNav style={noBackground} className="front"/>*/}
                         {/*<h2>Front side</h2>*/}
                         {/*<ul>*/}
                         <p><a href="/home">home</a></p>
