@@ -5,10 +5,10 @@
     /*margin: - top: 150px;*/
     perspective: 1000px;
     perspective-origin: 50% 50%;
-    background-image: linear-gradient(135deg,#ccc 25%,#ddd 25%,#ddd 50%, #ccc 50%, #ccc 75%,#ddd 75%,#ddd 100%);
+    /*background-image: linear-gradient(-135deg,#ccc 25%,#ddd 25%,#ddd 50%, #ccc 50%, #ccc 75%,#ddd 75%,#ddd 100%);*/
     background-size: 80px 80px;
-    border-top: solid 3px #999;
-    border-bottom: solid 3px #999;
+    /*border-top: solid 3px #999;*/
+    /*border-bottom: solid 3px #999;*/
     /* Background stripes animation */
     animation: bganim 3s linear 2s infinite;
 }
@@ -39,7 +39,7 @@
     width: 100%;
     opacity: 0.9;
     background-color: #000;
-    border: solid 1px #eee;
+    border: solid 1px chartreuse;
     color: #fff;
     font: 50px arial;
     transition: transform 0.2s ease-in;
@@ -82,12 +82,23 @@
         transform: rotateX(360deg) rotateY(360deg);
     }
 }
+@keyframes rotateToStop {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
 
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
 .cube {
 
 }
 .cubeAnimation {
     animation: rotate 10s infinite linear;
+}
+.cubeAnimationToStop{
+    animation: rotateToStop 0.3s linear;
 }
 .cube:hover {
     /*animation: normal;*/
@@ -141,4 +152,14 @@
 
 .boomBottom {
     transform: rotateX(270deg) translateZ(700px) translateY(700px);
+}
+
+.enterTextPtag {
+    padding-top: 30%;
+}
+.enterTextAtag{
+    color: white;
+}
+.enterTextAtag:hover{
+    color: chartreuse;
 }

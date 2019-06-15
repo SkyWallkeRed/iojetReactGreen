@@ -14,6 +14,7 @@ const noBackground = {
     padding: 0
 };
 
+
 class CubeComponent extends Component {
 
     constructor(props) {
@@ -27,7 +28,9 @@ class CubeComponent extends Component {
 
     handleClick() {
         console.log('*********************************************');
-        document.getElementsByClassName('cube')[ 0 ].classList.remove('cubeAnimation')
+        const cube = document.getElementsByClassName('cube')[ 0 ];
+        cube.classList.remove('cubeAnimation');
+        cube.classList.add('cubeAnimationToStop');
         // document.getElementsByClassName('front')[0].classList.add('boomFront');
         // document.getElementsByClassName('back')[0].classList.add('boomBack');
         // document.getElementsByClassName('right')[0].classList.add('boomRight');
@@ -39,7 +42,7 @@ class CubeComponent extends Component {
 
     componentDidMount() {
         // use the node ref to create the animation
-        this.myTween = TweenLite.to(this.myElement, 1, { y: '100%' });
+        this.myTween = TweenLite.to(this.myElement, 2.5, { y: '100%' });
 
     }
 
@@ -62,13 +65,13 @@ class CubeComponent extends Component {
             {/*Cube</a>, by <a href="http://www.codicode.com" target="_blank">Codicode</a>.*/}
             {/*</div>*/}
             {/*</div>*/}
-            <div className="wrap">
-                <div className="cube cubeAnimation" onClick={this.handleClick}>
+            <div className="wrap" onClick={this.handleClick}>
+                <div className="cube cubeAnimation" >
                     <div className="front">
                         {/*<h2>Front side</h2>*/}
                         {/*<ul>*/}
-                        <p><a href="/home">home</a></p>
-                        <p><a href="/topics">topics</a></p>
+                        <p className="enterTextPtag"><a className="enterTextAtag"  href="/home">ENTER</a></p>
+                        {/*<p><a href="/topics">topics</a></p>*/}
                         {/*<li>*/}
                         {/*<Link to="/">Home</Link>*/}
                         {/*</li>*/}
@@ -83,22 +86,27 @@ class CubeComponent extends Component {
                     </div>
                     <div className="back">
                         {/*<h2>Back side</h2>*/}
+                        <p className="enterTextPtag"><a className="enterTextAtag" href="/home">ENTER</a></p>
 
                     </div>
                     <div className="top">
                         {/*<h2>Top side</h2>*/}
+                        <p className="enterTextPtag"><a className="enterTextAtag" href="/home">ENTER</a></p>
 
                     </div>
                     <div className="bottom">
                         {/*<h2>Bottom side</h2>*/}
+                        <p className="enterTextPtag"><a className="enterTextAtag" href="/home">ENTER</a></p>
 
                     </div>
                     <div className="left">
                         {/*<h2>Left side</h2>*/}
+                        <p className="enterTextPtag"><a className="enterTextAtag" href="/home">ENTER</a></p>
 
                     </div>
                     <div className="right">
                         {/*<h2>Right side</h2>*/}
+                        <p className="enterTextPtag"><a className="enterTextAtag" href="/home">ENTER</a></p>
 
                     </div>
                 </div>
