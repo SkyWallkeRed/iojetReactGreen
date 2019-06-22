@@ -21,6 +21,7 @@ class MainContainer extends Component {
                 {/*<CubeComponent/>*/}
                 {/*<RouterNav/>*/}
                 <ParticalsContainer/>
+                {/*<CrossBlue/>*/}
             </div>
         )
     }

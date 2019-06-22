@@ -5,6 +5,20 @@ import '../styles/multipale-ele.css'
 
 const eleWidth = screenOverlay[ 0 ].size;
 const eleHeight = screenOverlay[ 0 ].size;
+const green = {
+    marginTop: 20,
+    height: 50,
+    width: 50,
+    // backgroundColor: 'green'
+};
+const bot0 = windowHeight - ((windowHeight / 5) );
+const boxPos = {
+    width: '15%',
+    position: 'absolute',
+    top: `${bot0}px`,
+    left: (windowWidth / 2) - screenOverlay[ 0 ].size
+};
+
 
 const eleStyle = {
     // position: 'relative',
@@ -43,8 +57,8 @@ class MultipleElements extends Component {
 
     render() {
         this.iconsAnimation.kill().clear().pause(0);
-        this.iconsAnimation.play();
-        return <div className="col-12">
+        this.iconsAnimation.reverse();
+        return <div className="col-12 position-absolute">
             <div className="row ">
 
                 <div className="col-12 controlPanel">
@@ -73,7 +87,8 @@ class MultipleElements extends Component {
                         </button>
                     </div>
                 </div>
-
+                <img src='https://dallas.skincareshows.com/new/wp-content/uploads/2016/11/register-dallas.png' alt=""
+                     style={green} className={'green'}/>
                 {// map through the elements
                     screenOverlay.map((element, index) => (
 
@@ -87,6 +102,9 @@ class MultipleElements extends Component {
 
                     ))}
             </div>
+            {/*<img style={boxPos}*/}
+                 {/*src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0ku6a_ovqb8OUsl8G0voh6scPMjxSGAyu9x6wY07rbEpHo4Gf"*/}
+                 {/*alt=""/>*/}
         </div>;
     }
 }
